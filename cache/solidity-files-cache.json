@@ -1,0 +1,5504 @@
+{
+  "_format": "hh-sol-cache-2",
+  "files": {
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/access/AccessControl.sol": {
+      "lastModificationDate": 1612017967261,
+      "contentHash": "54eb0b53c109558e8312811342e95bf0",
+      "sourceName": "contracts/access/AccessControl.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/EnumerableSet.sol",
+        "../utils/Address.sol",
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "AccessControl"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/utils/EnumerableSet.sol": {
+      "lastModificationDate": 1612018076091,
+      "contentHash": "db7b1afdb2c204e1e52100b79f0c847e",
+      "sourceName": "contracts/utils/EnumerableSet.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "EnumerableSet"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/utils/Address.sol": {
+      "lastModificationDate": 1612018076086,
+      "contentHash": "ed13c47a4912f2a7613c0e071eba44a7",
+      "sourceName": "contracts/utils/Address.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "Address"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/utils/Context.sol": {
+      "lastModificationDate": 1612018076096,
+      "contentHash": "2adbd82f6d055a4751566d4671512b03",
+      "sourceName": "contracts/utils/Context.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Context"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/access/TimelockController.sol": {
+      "lastModificationDate": 1612017967258,
+      "contentHash": "3b7f9a348d0fcbd0d3eff770f878db86",
+      "sourceName": "contracts/access/TimelockController.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./../math/SafeMath.sol",
+        "./AccessControl.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.9 <0.8.0"
+      ],
+      "artifacts": [
+        "TimelockController"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/math/SafeMath.sol": {
+      "lastModificationDate": 1612017967355,
+      "contentHash": "aa9ab65c26030388ed61532fb72a9b16",
+      "sourceName": "contracts/math/SafeMath.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeMath"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/utils/Counters.sol": {
+      "lastModificationDate": 1612018076078,
+      "contentHash": "304a56eb1322144704fb39f8c7e6d722",
+      "sourceName": "contracts/utils/Counters.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Counters"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/token/ERC20/ERC20Snapshot.sol": {
+      "lastModificationDate": 1612017967088,
+      "contentHash": "e18b83ebebe2ae229766f0b6bb0e9d28",
+      "sourceName": "contracts/token/ERC20/ERC20Snapshot.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../math/SafeMath.sol",
+        "../../utils/Arrays.sol",
+        "../../utils/Counters.sol",
+        "./ERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC20Snapshot"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/utils/Arrays.sol": {
+      "lastModificationDate": 1612018076084,
+      "contentHash": "1dbebf76b7e090e7b226ed3fcc29058b",
+      "sourceName": "contracts/utils/Arrays.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../math/Math.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Arrays"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1612554691885,
+      "contentHash": "4ad87c3d1e141c315b9770a95d9dde0c",
+      "sourceName": "contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/Context.sol",
+        "./IERC20.sol",
+        "../../math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC20"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/math/Math.sol": {
+      "lastModificationDate": 1612017967363,
+      "contentHash": "e5c844515b04deabacef7eb872abc384",
+      "sourceName": "contracts/math/Math.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Math"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1612017967067,
+      "contentHash": "e0a41531d159d3a32f84b7a3ecf9fabb",
+      "sourceName": "contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/token/ERC20/ERC20Pausable.sol": {
+      "lastModificationDate": 1612017967083,
+      "contentHash": "42c0638e45b2c33154488610fe3091fe",
+      "sourceName": "contracts/token/ERC20/ERC20Pausable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC20.sol",
+        "../../utils/Pausable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC20Pausable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/utils/Pausable.sol": {
+      "lastModificationDate": 1612018076076,
+      "contentHash": "6960b40911542e6004ab95031ef9c3b9",
+      "sourceName": "contracts/utils/Pausable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Context.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Pausable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/token/ERC20/ERC20Burnable.sol": {
+      "lastModificationDate": 1612017967076,
+      "contentHash": "1603b7aab78c87467dde869fd19ec86b",
+      "sourceName": "contracts/token/ERC20/ERC20Burnable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/Context.sol",
+        "./ERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC20Burnable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/token/ERC1155/ERC1155.sol": {
+      "lastModificationDate": 1612161632356,
+      "contentHash": "1de7fbfb99207004c95f527d43408574",
+      "sourceName": "contracts/token/ERC1155/ERC1155.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC1155.sol",
+        "./IERC1155MetadataURI.sol",
+        "./IERC1155Receiver.sol",
+        "../../utils/Context.sol",
+        "../../introspection/ERC165.sol",
+        "../../math/SafeMath.sol",
+        "../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC1155"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/token/ERC1155/IERC1155.sol": {
+      "lastModificationDate": 1612017967148,
+      "contentHash": "cb9dc62067a205eeab4f390c72c7fe14",
+      "sourceName": "contracts/token/ERC1155/IERC1155.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC1155"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/token/ERC1155/IERC1155MetadataURI.sol": {
+      "lastModificationDate": 1612017967157,
+      "contentHash": "9a313e25e2a837a50f7ae87017539457",
+      "sourceName": "contracts/token/ERC1155/IERC1155MetadataURI.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC1155.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC1155MetadataURI"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/token/ERC1155/IERC1155Receiver.sol": {
+      "lastModificationDate": 1612017967145,
+      "contentHash": "27af002e8fc1118d099c99fc8852bb73",
+      "sourceName": "contracts/token/ERC1155/IERC1155Receiver.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC1155Receiver"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/introspection/ERC165.sol": {
+      "lastModificationDate": 1612017967216,
+      "contentHash": "08f854e2dd3c262845bba38c9b48e4e0",
+      "sourceName": "contracts/introspection/ERC165.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC165"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/introspection/IERC165.sol": {
+      "lastModificationDate": 1612017967219,
+      "contentHash": "0d62a8380952235f135dae91590f90a3",
+      "sourceName": "contracts/introspection/IERC165.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC165"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/token/ERC1155/ERC1155Pausable.sol": {
+      "lastModificationDate": 1612017967151,
+      "contentHash": "1c9983634bec9d2c8dbdd8c3ef210895",
+      "sourceName": "contracts/token/ERC1155/ERC1155Pausable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC1155.sol",
+        "../../utils/Pausable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC1155Pausable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/token/ERC1155/ERC1155Burnable.sol": {
+      "lastModificationDate": 1612017967163,
+      "contentHash": "e9e23a67a9d60cd0e6d133323b704b8d",
+      "sourceName": "contracts/token/ERC1155/ERC1155Burnable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC1155.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC1155Burnable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/token/ERC20/SafeERC20.sol": {
+      "lastModificationDate": 1612017967079,
+      "contentHash": "33e22842646d746e5c4124c2fdc051aa",
+      "sourceName": "contracts/token/ERC20/SafeERC20.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20.sol",
+        "../../math/SafeMath.sol",
+        "../../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeERC20"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/token/ERC20/TokenTimelock.sol": {
+      "lastModificationDate": 1612017967071,
+      "contentHash": "ed10a598474421087708cfd3967b66a3",
+      "sourceName": "contracts/token/ERC20/TokenTimelock.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./SafeERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "TokenTimelock"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/GSN/GSNRecipientERC20Fee.sol": {
+      "lastModificationDate": 1612017967305,
+      "contentHash": "1ec5f21da953469ec0c8bf89a604d2ba",
+      "sourceName": "contracts/GSN/GSNRecipientERC20Fee.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./GSNRecipient.sol",
+        "../math/SafeMath.sol",
+        "../access/Ownable.sol",
+        "../token/ERC20/SafeERC20.sol",
+        "../token/ERC20/ERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "GSNRecipientERC20Fee",
+        "__unstable__ERC20Owned"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/GSN/GSNRecipient.sol": {
+      "lastModificationDate": 1612017967311,
+      "contentHash": "6019905a6ca3196a177917e04f5b29a3",
+      "sourceName": "contracts/GSN/GSNRecipient.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol",
+        "./IRelayRecipient.sol",
+        "./IRelayHub.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "GSNRecipient"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1612548176732,
+      "contentHash": "9c325cfa121c7997f192a57ab6bff095",
+      "sourceName": "contracts/access/Ownable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Ownable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/GSN/IRelayRecipient.sol": {
+      "lastModificationDate": 1612017967309,
+      "contentHash": "0bf08baf48262eb41bc206529963621d",
+      "sourceName": "contracts/GSN/IRelayRecipient.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IRelayRecipient"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/GSN/IRelayHub.sol": {
+      "lastModificationDate": 1612017967302,
+      "contentHash": "3d76829bda93b091eafa44820d8a7596",
+      "sourceName": "contracts/GSN/IRelayHub.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IRelayHub"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/GSN/GSNRecipientSignature.sol": {
+      "lastModificationDate": 1612017967299,
+      "contentHash": "cfa3c366a1a8c8b8411df236b763cc20",
+      "sourceName": "contracts/GSN/GSNRecipientSignature.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./GSNRecipient.sol",
+        "../cryptography/ECDSA.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "GSNRecipientSignature"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/cryptography/ECDSA.sol": {
+      "lastModificationDate": 1612018100538,
+      "contentHash": "373a483bb0a88668c0735924d84f50f1",
+      "sourceName": "contracts/cryptography/ECDSA.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ECDSA"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/token/ERC1155/ERC1155Receiver.sol": {
+      "lastModificationDate": 1612017967143,
+      "contentHash": "69c3911c0b2e8ed32652765179023865",
+      "sourceName": "contracts/token/ERC1155/ERC1155Receiver.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC1155Receiver.sol",
+        "../../introspection/ERC165.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC1155Receiver"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/token/ERC1155/ERC1155Holder.sol": {
+      "lastModificationDate": 1612017967160,
+      "contentHash": "ca5387e1c39109d459f2ff8f22deafd4",
+      "sourceName": "contracts/token/ERC1155/ERC1155Holder.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC1155Receiver.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC1155Holder"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/GSN/Context.sol": {
+      "lastModificationDate": 1612017967318,
+      "contentHash": "a02aa4ae53018d92603a3ead2c365958",
+      "sourceName": "contracts/GSN/Context.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/token/ERC20/ERC20Capped.sol": {
+      "lastModificationDate": 1612017967091,
+      "contentHash": "c7b90bb47793b219e087d0906b6dc502",
+      "sourceName": "contracts/token/ERC20/ERC20Capped.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC20.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC20Capped"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/cryptography/MerkleProof.sol": {
+      "lastModificationDate": 1612018100543,
+      "contentHash": "44bd823687d58263d3b1da555235f93e",
+      "sourceName": "contracts/cryptography/MerkleProof.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "MerkleProof"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/introspection/ERC165Checker.sol": {
+      "lastModificationDate": 1612017967204,
+      "contentHash": "91358f2059d2e9d6e21854906683a461",
+      "sourceName": "contracts/introspection/ERC165Checker.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC165Checker"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/introspection/ERC1820Implementer.sol": {
+      "lastModificationDate": 1612017967212,
+      "contentHash": "aab247a0f70f8616167be10710c9506c",
+      "sourceName": "contracts/introspection/ERC1820Implementer.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC1820Implementer.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC1820Implementer"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/introspection/IERC1820Implementer.sol": {
+      "lastModificationDate": 1612017967201,
+      "contentHash": "663251cfa9462cad6003a81bc876c938",
+      "sourceName": "contracts/introspection/IERC1820Implementer.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC1820Implementer"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/introspection/IERC1820Registry.sol": {
+      "lastModificationDate": 1612017967199,
+      "contentHash": "820888c202bc007f6112423ee95b9cf0",
+      "sourceName": "contracts/introspection/IERC1820Registry.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC1820Registry"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/math/SignedSafeMath.sol": {
+      "lastModificationDate": 1612017967360,
+      "contentHash": "159169e078460f380436878421b73431",
+      "sourceName": "contracts/math/SignedSafeMath.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SignedSafeMath"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/utils/Create2.sol": {
+      "lastModificationDate": 1612018076093,
+      "contentHash": "17a4b4fc2d10b81889d9d34036656a34",
+      "sourceName": "contracts/utils/Create2.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Create2"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/utils/EnumerableMap.sol": {
+      "lastModificationDate": 1612018076081,
+      "contentHash": "6c0a3d67b61b3c581d1e234c7da1a22b",
+      "sourceName": "contracts/utils/EnumerableMap.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "EnumerableMap"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/utils/ReentrancyGuard.sol": {
+      "lastModificationDate": 1612018076072,
+      "contentHash": "1c60f58cee45c61469e1aea31e4dd879",
+      "sourceName": "contracts/utils/ReentrancyGuard.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ReentrancyGuard"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/utils/SafeCast.sol": {
+      "lastModificationDate": 1612018076102,
+      "contentHash": "c227dcf457382aabf2d78218f6457799",
+      "sourceName": "contracts/utils/SafeCast.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeCast"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/utils/Strings.sol": {
+      "lastModificationDate": 1612018076098,
+      "contentHash": "c86a31bacf868d392eda08a0eccc4735",
+      "sourceName": "contracts/utils/Strings.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Strings"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/mock/ERC1155Mock.sol": {
+      "lastModificationDate": 1612023526219,
+      "contentHash": "d1e992fd5a064f4537bf7b9d6910f901",
+      "sourceName": "contracts/mock/ERC1155Mock.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../token/ERC1155/ERC1155.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC1155Mock"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/RelatableGameContracts/ERC1155RG.sol": {
+      "lastModificationDate": 1612634681998,
+      "contentHash": "fea919f8d718c4b75c7e31e70b035f40",
+      "sourceName": "contracts/RelatableGameContracts/ERC1155RG.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../token/ERC1155/ERC1155Pausable.sol",
+        "../synthetix/Owned.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC1155RG"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/synthetix/Owned.sol": {
+      "lastModificationDate": 1612419845230,
+      "contentHash": "d99a0fa0cec9c1e9e2520e91604c6d27",
+      "sourceName": "contracts/synthetix/Owned.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Owned"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/RelatableGameContracts/ERC20RG.sol": {
+      "lastModificationDate": 1613296884140,
+      "contentHash": "74185b9dbb39fdb1535f90e5225e6799",
+      "sourceName": "contracts/RelatableGameContracts/ERC20RG.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Context.sol",
+        "./IERC20.sol",
+        "../math/SafeMath.sol",
+        "../utils/Pausable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC20RG"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/RelatableGameContracts/IERC20.sol": {
+      "lastModificationDate": 1612594589947,
+      "contentHash": "81c3feab8300ce78204715bfad69e8ff",
+      "sourceName": "contracts/RelatableGameContracts/IERC20.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC20"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/RelatableGameContracts/ERC1155Game.sol": {
+      "lastModificationDate": 1613296657599,
+      "contentHash": "49afba1af6425fce257d521cd923c1eb",
+      "sourceName": "contracts/RelatableGameContracts/ERC1155Game.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../math/Math.sol",
+        "../math/SafeMath.sol",
+        "../upgradablecontracts/access/OwnableUpgradeable.sol",
+        "../upgradablecontracts/utils/ContextUpgradeable.sol",
+        "./IERC1155RG.sol",
+        "./IERC20.sol",
+        "../upgradablecontracts/utils/ReentrancyGuardUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "ERC1155Game"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/RelatableGameContracts/IERC1155RG.sol": {
+      "lastModificationDate": 1612801259678,
+      "contentHash": "ce6abac9d5476f92eae967d0d3c58c6a",
+      "sourceName": "contracts/RelatableGameContracts/IERC1155RG.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../introspection/IERC165.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC1155"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/synthetix/RewardsDistributionRecipient.sol": {
+      "lastModificationDate": 1612596416168,
+      "contentHash": "dfc0085ff1eca607af1c3ae31cbd4e0c",
+      "sourceName": "contracts/synthetix/RewardsDistributionRecipient.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Owned.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "RewardsDistributionRecipient"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/synthetix/StakingRewards.sol": {
+      "lastModificationDate": 1613295465362,
+      "contentHash": "89f92dd949ad92e833da014d04bef581",
+      "sourceName": "contracts/synthetix/StakingRewards.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../math/Math.sol",
+        "../math/SafeMath.sol",
+        "../token/ERC20/IERC20.sol",
+        "../utils/ReentrancyGuard.sol",
+        "./interfaces/IStakingRewards.sol",
+        "./RewardsDistributionRecipient.sol",
+        "./Pausable.sol",
+        "../utils/Context.sol",
+        "../RelatableGameContracts/IERC1155Game.sol",
+        "../RelatableGameContracts/IERC1155RG.sol",
+        "../token/ERC1155/ERC1155Holder.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "StakingRewards"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/synthetix/interfaces/IStakingRewards.sol": {
+      "lastModificationDate": 1613064323136,
+      "contentHash": "d36f6da5beb0c266b215e05c06dc4887",
+      "sourceName": "contracts/synthetix/interfaces/IStakingRewards.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IStakingRewards"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/synthetix/Pausable.sol": {
+      "lastModificationDate": 1612596416169,
+      "contentHash": "0b42be977c87c81806bd4fac9c61d5ab",
+      "sourceName": "contracts/synthetix/Pausable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Owned.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Pausable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/RelatableGameContracts/IERC1155Game.sol": {
+      "lastModificationDate": 1612876741915,
+      "contentHash": "498dbc40717c594400598006b3d4ecd6",
+      "sourceName": "contracts/RelatableGameContracts/IERC1155Game.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC1155Game"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/proxy/Initializable.sol": {
+      "lastModificationDate": 1613040852330,
+      "contentHash": "1efacd801320f8f9413700ddbcf00647",
+      "sourceName": "contracts/proxy/Initializable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        ">=0.4.24 <0.8.0"
+      ],
+      "artifacts": [
+        "Initializable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/proxy/UpgradeableBeacon.sol": {
+      "lastModificationDate": 1613040852347,
+      "contentHash": "068587e17b1e1c35d156353c006b1b7a",
+      "sourceName": "contracts/proxy/UpgradeableBeacon.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IBeacon.sol",
+        "../access/Ownable.sol",
+        "../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "UpgradeableBeacon"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/proxy/IBeacon.sol": {
+      "lastModificationDate": 1613040852340,
+      "contentHash": "4db9e23bbd1f4807251e2533af88b4f7",
+      "sourceName": "contracts/proxy/IBeacon.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IBeacon"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/proxy/ProxyAdmin.sol": {
+      "lastModificationDate": 1613040852333,
+      "contentHash": "61e1e11a965a3a8df0f2252ea2828584",
+      "sourceName": "contracts/proxy/ProxyAdmin.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../access/Ownable.sol",
+        "./TransparentUpgradeableProxy.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ProxyAdmin"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/proxy/TransparentUpgradeableProxy.sol": {
+      "lastModificationDate": 1613040852338,
+      "contentHash": "572da86d0eb185b41f85df7d2d75378b",
+      "sourceName": "contracts/proxy/TransparentUpgradeableProxy.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./UpgradeableProxy.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "TransparentUpgradeableProxy"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/proxy/UpgradeableProxy.sol": {
+      "lastModificationDate": 1613040852336,
+      "contentHash": "c163cbd51d0173b71c8137b0ddf1e0ba",
+      "sourceName": "contracts/proxy/UpgradeableProxy.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Proxy.sol",
+        "../utils/Address.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "UpgradeableProxy"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/proxy/Proxy.sol": {
+      "lastModificationDate": 1613040852343,
+      "contentHash": "52841a5095656ecbf7bc86cd6c114699",
+      "sourceName": "contracts/proxy/Proxy.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Proxy"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/proxy/BeaconProxy.sol": {
+      "lastModificationDate": 1613040852348,
+      "contentHash": "1d6f34b32c18217c6f11313c5310fcbb",
+      "sourceName": "contracts/proxy/BeaconProxy.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Proxy.sol",
+        "../utils/Address.sol",
+        "./IBeacon.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "BeaconProxy"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/proxy/Clones.sol": {
+      "lastModificationDate": 1613040852341,
+      "contentHash": "977507a7477ca015c314f59e466148e0",
+      "sourceName": "contracts/proxy/Clones.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Clones"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/access/OwnableUpgradeable.sol": {
+      "lastModificationDate": 1613042276483,
+      "contentHash": "91a7735bfcbb48c7482f10f1083a8ed8",
+      "sourceName": "contracts/upgradablecontracts/access/OwnableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/ContextUpgradeable.sol",
+        "../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "OwnableUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/utils/ContextUpgradeable.sol": {
+      "lastModificationDate": 1613042276565,
+      "contentHash": "9f901c17a18eadc08042b6a510da3b7d",
+      "sourceName": "contracts/upgradablecontracts/utils/ContextUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ContextUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/proxy/Initializable.sol": {
+      "lastModificationDate": 1613042276471,
+      "contentHash": "71b3ac8d4da61bb6c6708c12f56e3c1f",
+      "sourceName": "contracts/upgradablecontracts/proxy/Initializable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/AddressUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.4.24 <0.8.0"
+      ],
+      "artifacts": [
+        "Initializable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/utils/AddressUpgradeable.sol": {
+      "lastModificationDate": 1613042276599,
+      "contentHash": "aa72beb3bf14f8394b4a8a292d66589c",
+      "sourceName": "contracts/upgradablecontracts/utils/AddressUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "AddressUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC777/ERC777Upgradeable.sol": {
+      "lastModificationDate": 1613042276385,
+      "contentHash": "768ccd5d5bcc6208f93c0d1e297bc712",
+      "sourceName": "contracts/upgradablecontracts/token/ERC777/ERC777Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/ContextUpgradeable.sol",
+        "./IERC777Upgradeable.sol",
+        "./IERC777RecipientUpgradeable.sol",
+        "./IERC777SenderUpgradeable.sol",
+        "../../token/ERC20/IERC20Upgradeable.sol",
+        "../../math/SafeMathUpgradeable.sol",
+        "../../utils/AddressUpgradeable.sol",
+        "../../introspection/IERC1820RegistryUpgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC777Upgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC777/IERC777Upgradeable.sol": {
+      "lastModificationDate": 1613042276395,
+      "contentHash": "2ce229fd072ca5961c5271879c530bac",
+      "sourceName": "contracts/upgradablecontracts/token/ERC777/IERC777Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC777Upgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC777/IERC777RecipientUpgradeable.sol": {
+      "lastModificationDate": 1613042276381,
+      "contentHash": "d362f3bbee45354fcd6393dafb03ef18",
+      "sourceName": "contracts/upgradablecontracts/token/ERC777/IERC777RecipientUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC777RecipientUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC777/IERC777SenderUpgradeable.sol": {
+      "lastModificationDate": 1613042276391,
+      "contentHash": "e66b17bc0369e313e9d52750d3a9ac25",
+      "sourceName": "contracts/upgradablecontracts/token/ERC777/IERC777SenderUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC777SenderUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC20/IERC20Upgradeable.sol": {
+      "lastModificationDate": 1613042276377,
+      "contentHash": "6c8edd65243ec9d6eb91cc63cce2cd16",
+      "sourceName": "contracts/upgradablecontracts/token/ERC20/IERC20Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC20Upgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/math/SafeMathUpgradeable.sol": {
+      "lastModificationDate": 1613042276629,
+      "contentHash": "33cad0216fea16ce4baadc5603b84218",
+      "sourceName": "contracts/upgradablecontracts/math/SafeMathUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeMathUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/introspection/IERC1820RegistryUpgradeable.sol": {
+      "lastModificationDate": 1613042276617,
+      "contentHash": "d6b51d95f558c3c31f39056c3951d769",
+      "sourceName": "contracts/upgradablecontracts/introspection/IERC1820RegistryUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC1820RegistryUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/utils/ReentrancyGuardUpgradeable.sol": {
+      "lastModificationDate": 1613042276568,
+      "contentHash": "008d2d730bc1f24f3c0fafa29b7a0bd2",
+      "sourceName": "contracts/upgradablecontracts/utils/ReentrancyGuardUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ReentrancyGuardUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC721/ERC721PausableUpgradeable.sol": {
+      "lastModificationDate": 1613042276408,
+      "contentHash": "83f264d9e6bb1279ff0f0d6fbad6c3e8",
+      "sourceName": "contracts/upgradablecontracts/token/ERC721/ERC721PausableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC721Upgradeable.sol",
+        "../../utils/PausableUpgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC721PausableUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC721/ERC721Upgradeable.sol": {
+      "lastModificationDate": 1613042276419,
+      "contentHash": "257300f2edf6321055d08d824bfc7440",
+      "sourceName": "contracts/upgradablecontracts/token/ERC721/ERC721Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/ContextUpgradeable.sol",
+        "./IERC721Upgradeable.sol",
+        "./IERC721MetadataUpgradeable.sol",
+        "./IERC721EnumerableUpgradeable.sol",
+        "./IERC721ReceiverUpgradeable.sol",
+        "../../introspection/ERC165Upgradeable.sol",
+        "../../math/SafeMathUpgradeable.sol",
+        "../../utils/AddressUpgradeable.sol",
+        "../../utils/EnumerableSetUpgradeable.sol",
+        "../../utils/EnumerableMapUpgradeable.sol",
+        "../../utils/StringsUpgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC721Upgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/utils/PausableUpgradeable.sol": {
+      "lastModificationDate": 1613042276562,
+      "contentHash": "a98b8522414f12c1b8fc7b2685278399",
+      "sourceName": "contracts/upgradablecontracts/utils/PausableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ContextUpgradeable.sol",
+        "../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "PausableUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC721/IERC721Upgradeable.sol": {
+      "lastModificationDate": 1613042276406,
+      "contentHash": "9b8e95b25ad9e9907cef82d4adabe91b",
+      "sourceName": "contracts/upgradablecontracts/token/ERC721/IERC721Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../introspection/IERC165Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC721Upgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC721/IERC721MetadataUpgradeable.sol": {
+      "lastModificationDate": 1613042276411,
+      "contentHash": "2d7026b65054974c694449d3f243bb39",
+      "sourceName": "contracts/upgradablecontracts/token/ERC721/IERC721MetadataUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC721MetadataUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC721/IERC721EnumerableUpgradeable.sol": {
+      "lastModificationDate": 1613042276402,
+      "contentHash": "91be9105f64b0e3ef04ca0672e5249d5",
+      "sourceName": "contracts/upgradablecontracts/token/ERC721/IERC721EnumerableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC721EnumerableUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC721/IERC721ReceiverUpgradeable.sol": {
+      "lastModificationDate": 1613042276421,
+      "contentHash": "f7320992df40480ec8045cac518ad11c",
+      "sourceName": "contracts/upgradablecontracts/token/ERC721/IERC721ReceiverUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC721ReceiverUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/introspection/ERC165Upgradeable.sol": {
+      "lastModificationDate": 1613042276620,
+      "contentHash": "2fe109cd8f5cb2cc237b5e6a7e99edd7",
+      "sourceName": "contracts/upgradablecontracts/introspection/ERC165Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC165Upgradeable.sol",
+        "../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC165Upgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/utils/EnumerableSetUpgradeable.sol": {
+      "lastModificationDate": 1613042276594,
+      "contentHash": "b927cbeb303f88e9f6b38fdc71a5d381",
+      "sourceName": "contracts/upgradablecontracts/utils/EnumerableSetUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "EnumerableSetUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/utils/EnumerableMapUpgradeable.sol": {
+      "lastModificationDate": 1613042276558,
+      "contentHash": "4ff02b74113158b1360f1eb85a7be7f3",
+      "sourceName": "contracts/upgradablecontracts/utils/EnumerableMapUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "EnumerableMapUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/utils/StringsUpgradeable.sol": {
+      "lastModificationDate": 1613042276574,
+      "contentHash": "f00ef76e89770e6a3e3f0e4da0844794",
+      "sourceName": "contracts/upgradablecontracts/utils/StringsUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "StringsUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/introspection/IERC165Upgradeable.sol": {
+      "lastModificationDate": 1613042276612,
+      "contentHash": "1e80a066fb319fc9752e62673a0e9450",
+      "sourceName": "contracts/upgradablecontracts/introspection/IERC165Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC165Upgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC20/ERC20PausableUpgradeable.sol": {
+      "lastModificationDate": 1613042276369,
+      "contentHash": "3caffa6c0052fe54c352770eaec1589b",
+      "sourceName": "contracts/upgradablecontracts/token/ERC20/ERC20PausableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC20Upgradeable.sol",
+        "../../utils/PausableUpgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC20PausableUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC20/ERC20Upgradeable.sol": {
+      "lastModificationDate": 1613042276354,
+      "contentHash": "4404d773c16609e9c316b0acaa487556",
+      "sourceName": "contracts/upgradablecontracts/token/ERC20/ERC20Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/ContextUpgradeable.sol",
+        "./IERC20Upgradeable.sol",
+        "../../math/SafeMathUpgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC20Upgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC20/ERC20SnapshotUpgradeable.sol": {
+      "lastModificationDate": 1613042276366,
+      "contentHash": "2b9c508ebb4c57756e57900b17e44830",
+      "sourceName": "contracts/upgradablecontracts/token/ERC20/ERC20SnapshotUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../math/SafeMathUpgradeable.sol",
+        "../../utils/ArraysUpgradeable.sol",
+        "../../utils/CountersUpgradeable.sol",
+        "./ERC20Upgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC20SnapshotUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/utils/ArraysUpgradeable.sol": {
+      "lastModificationDate": 1613042276591,
+      "contentHash": "abb9f3fa1c884330b53a8ac2ff8c0c76",
+      "sourceName": "contracts/upgradablecontracts/utils/ArraysUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../math/MathUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ArraysUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/utils/CountersUpgradeable.sol": {
+      "lastModificationDate": 1613042276588,
+      "contentHash": "8cba95f8a22b2fb5aad5aa6cede94288",
+      "sourceName": "contracts/upgradablecontracts/utils/CountersUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../math/SafeMathUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "CountersUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/math/MathUpgradeable.sol": {
+      "lastModificationDate": 1613042276632,
+      "contentHash": "309783d0070f4c863bcb1bd659e2698b",
+      "sourceName": "contracts/upgradablecontracts/math/MathUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "MathUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/access/AccessControlUpgradeable.sol": {
+      "lastModificationDate": 1613042276480,
+      "contentHash": "93f85b95169bc2845edf664305aeb33b",
+      "sourceName": "contracts/upgradablecontracts/access/AccessControlUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/EnumerableSetUpgradeable.sol",
+        "../utils/AddressUpgradeable.sol",
+        "../utils/ContextUpgradeable.sol",
+        "../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "AccessControlUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/access/TimelockControllerUpgradeable.sol": {
+      "lastModificationDate": 1613042276489,
+      "contentHash": "cc6d75b5a7ed8b0d6c8173e56fa25b9b",
+      "sourceName": "contracts/upgradablecontracts/access/TimelockControllerUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./../math/SafeMathUpgradeable.sol",
+        "./AccessControlUpgradeable.sol",
+        "../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.9 <0.8.0"
+      ],
+      "artifacts": [
+        "TimelockControllerUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC1155/ERC1155Upgradeable.sol": {
+      "lastModificationDate": 1613042276467,
+      "contentHash": "56f03d1ab28143f8dff51cc763ea2ca8",
+      "sourceName": "contracts/upgradablecontracts/token/ERC1155/ERC1155Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC1155Upgradeable.sol",
+        "./IERC1155MetadataURIUpgradeable.sol",
+        "./IERC1155ReceiverUpgradeable.sol",
+        "../../utils/ContextUpgradeable.sol",
+        "../../introspection/ERC165Upgradeable.sol",
+        "../../math/SafeMathUpgradeable.sol",
+        "../../utils/AddressUpgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC1155Upgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC1155/IERC1155Upgradeable.sol": {
+      "lastModificationDate": 1613042276425,
+      "contentHash": "c6a7d22d689cb2a9f3571a879b444cc3",
+      "sourceName": "contracts/upgradablecontracts/token/ERC1155/IERC1155Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../introspection/IERC165Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC1155Upgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC1155/IERC1155MetadataURIUpgradeable.sol": {
+      "lastModificationDate": 1613042276444,
+      "contentHash": "beb762f1d5aed52c6044c40075b6d179",
+      "sourceName": "contracts/upgradablecontracts/token/ERC1155/IERC1155MetadataURIUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC1155Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC1155MetadataURIUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC1155/IERC1155ReceiverUpgradeable.sol": {
+      "lastModificationDate": 1613042276436,
+      "contentHash": "8beb84d08fa29b37f952d51a2d81dde5",
+      "sourceName": "contracts/upgradablecontracts/token/ERC1155/IERC1155ReceiverUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../introspection/IERC165Upgradeable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC1155ReceiverUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC1155/ERC1155PausableUpgradeable.sol": {
+      "lastModificationDate": 1613042276449,
+      "contentHash": "df15d7a36796760da74b9ba82f5f3544",
+      "sourceName": "contracts/upgradablecontracts/token/ERC1155/ERC1155PausableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC1155Upgradeable.sol",
+        "../../utils/PausableUpgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC1155PausableUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC1155/ERC1155ReceiverUpgradeable.sol": {
+      "lastModificationDate": 1613042276430,
+      "contentHash": "74849a02cfc25ce8214b23aa238a5ac8",
+      "sourceName": "contracts/upgradablecontracts/token/ERC1155/ERC1155ReceiverUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC1155ReceiverUpgradeable.sol",
+        "../../introspection/ERC165Upgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC1155ReceiverUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC1155/ERC1155HolderUpgradeable.sol": {
+      "lastModificationDate": 1613042276462,
+      "contentHash": "b9a9a6dea2147eced59c0fb7118a07e1",
+      "sourceName": "contracts/upgradablecontracts/token/ERC1155/ERC1155HolderUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC1155ReceiverUpgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC1155HolderUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC1155/ERC1155BurnableUpgradeable.sol": {
+      "lastModificationDate": 1613042276457,
+      "contentHash": "bbcbe14430d997dcbc67cc29599d2746",
+      "sourceName": "contracts/upgradablecontracts/token/ERC1155/ERC1155BurnableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC1155Upgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC1155BurnableUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/payment/PaymentSplitterUpgradeable.sol": {
+      "lastModificationDate": 1613042276543,
+      "contentHash": "4466d534afe9bf4b1d4b50b2721e7b7e",
+      "sourceName": "contracts/upgradablecontracts/payment/PaymentSplitterUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/ContextUpgradeable.sol",
+        "../math/SafeMathUpgradeable.sol",
+        "../utils/AddressUpgradeable.sol",
+        "../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "PaymentSplitterUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/payment/escrow/EscrowUpgradeable.sol": {
+      "lastModificationDate": 1613042276540,
+      "contentHash": "0debe11ae2e81603e70a98c70a363416",
+      "sourceName": "contracts/upgradablecontracts/payment/escrow/EscrowUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../math/SafeMathUpgradeable.sol",
+        "../../access/OwnableUpgradeable.sol",
+        "../../utils/AddressUpgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "EscrowUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/payment/PullPaymentUpgradeable.sol": {
+      "lastModificationDate": 1613042276530,
+      "contentHash": "7b7058036141cbb06a87d69bf748d83f",
+      "sourceName": "contracts/upgradablecontracts/payment/PullPaymentUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./escrow/EscrowUpgradeable.sol",
+        "../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "PullPaymentUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/GSN/GSNRecipientERC20FeeUpgradeable.sol": {
+      "lastModificationDate": 1613042276507,
+      "contentHash": "520289b52c9c09e7fe7278491cbb322a",
+      "sourceName": "contracts/upgradablecontracts/GSN/GSNRecipientERC20FeeUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./GSNRecipientUpgradeable.sol",
+        "../math/SafeMathUpgradeable.sol",
+        "../access/OwnableUpgradeable.sol",
+        "../token/ERC20/SafeERC20Upgradeable.sol",
+        "../token/ERC20/ERC20Upgradeable.sol",
+        "../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "GSNRecipientERC20FeeUpgradeable",
+        "__unstable__ERC20OwnedUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/GSN/GSNRecipientUpgradeable.sol": {
+      "lastModificationDate": 1613042276492,
+      "contentHash": "643ac57d24a0e5dff5747596e5f0594d",
+      "sourceName": "contracts/upgradablecontracts/GSN/GSNRecipientUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/ContextUpgradeable.sol",
+        "./IRelayRecipientUpgradeable.sol",
+        "./IRelayHubUpgradeable.sol",
+        "../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "GSNRecipientUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC20/SafeERC20Upgradeable.sol": {
+      "lastModificationDate": 1613042276374,
+      "contentHash": "baee93b27b5b91092cb32dd0b22d0a4d",
+      "sourceName": "contracts/upgradablecontracts/token/ERC20/SafeERC20Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC20Upgradeable.sol",
+        "../../math/SafeMathUpgradeable.sol",
+        "../../utils/AddressUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeERC20Upgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/GSN/IRelayRecipientUpgradeable.sol": {
+      "lastModificationDate": 1613042276498,
+      "contentHash": "79f01e5b5150efca7c92673a933e4ccc",
+      "sourceName": "contracts/upgradablecontracts/GSN/IRelayRecipientUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IRelayRecipientUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/GSN/IRelayHubUpgradeable.sol": {
+      "lastModificationDate": 1613042276495,
+      "contentHash": "bc1afd8519a11a27c984822acfb1a4f8",
+      "sourceName": "contracts/upgradablecontracts/GSN/IRelayHubUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IRelayHubUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC20/TokenTimelockUpgradeable.sol": {
+      "lastModificationDate": 1613042276356,
+      "contentHash": "65c7bf34041937bbfd46588c2ff99a4e",
+      "sourceName": "contracts/upgradablecontracts/token/ERC20/TokenTimelockUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./SafeERC20Upgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "TokenTimelockUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/GSN/GSNRecipientSignatureUpgradeable.sol": {
+      "lastModificationDate": 1613042276514,
+      "contentHash": "effd43f010e14a5e1448e2dffd50770e",
+      "sourceName": "contracts/upgradablecontracts/GSN/GSNRecipientSignatureUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./GSNRecipientUpgradeable.sol",
+        "../cryptography/ECDSAUpgradeable.sol",
+        "../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "GSNRecipientSignatureUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/cryptography/ECDSAUpgradeable.sol": {
+      "lastModificationDate": 1613042276522,
+      "contentHash": "8fe21554560075593b87ae37a30dea42",
+      "sourceName": "contracts/upgradablecontracts/cryptography/ECDSAUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ECDSAUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/drafts/ERC20PermitUpgradeable.sol": {
+      "lastModificationDate": 1613042276554,
+      "contentHash": "3e510705706431f5c73bdc56d616424d",
+      "sourceName": "contracts/upgradablecontracts/drafts/ERC20PermitUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../token/ERC20/ERC20Upgradeable.sol",
+        "./IERC20PermitUpgradeable.sol",
+        "../cryptography/ECDSAUpgradeable.sol",
+        "../utils/CountersUpgradeable.sol",
+        "./EIP712Upgradeable.sol",
+        "../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.5 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC20PermitUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/drafts/IERC20PermitUpgradeable.sol": {
+      "lastModificationDate": 1613042276552,
+      "contentHash": "851cd6f51cf3b2cbebe86458c2d3d4c1",
+      "sourceName": "contracts/upgradablecontracts/drafts/IERC20PermitUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC20PermitUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/drafts/EIP712Upgradeable.sol": {
+      "lastModificationDate": 1613042276546,
+      "contentHash": "561a5b469b2870291fdecd726e3f7501",
+      "sourceName": "contracts/upgradablecontracts/drafts/EIP712Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "EIP712Upgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/payment/escrow/ConditionalEscrowUpgradeable.sol": {
+      "lastModificationDate": 1613042276533,
+      "contentHash": "7d8757ebe8f077e00fe8c0854909ab5d",
+      "sourceName": "contracts/upgradablecontracts/payment/escrow/ConditionalEscrowUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./EscrowUpgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ConditionalEscrowUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/payment/escrow/RefundEscrowUpgradeable.sol": {
+      "lastModificationDate": 1613043196561,
+      "contentHash": "c9030b3d8bd6b32fadb2561bbaf488db",
+      "sourceName": "contracts/upgradablecontracts/payment/escrow/RefundEscrowUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ConditionalEscrowUpgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "RefundEscrowUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC721/ERC721HolderUpgradeable.sol": {
+      "lastModificationDate": 1613042276414,
+      "contentHash": "0455d7ce53d72c2d598e5495582b95ea",
+      "sourceName": "contracts/upgradablecontracts/token/ERC721/ERC721HolderUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC721ReceiverUpgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC721HolderUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC721/ERC721BurnableUpgradeable.sol": {
+      "lastModificationDate": 1613042276400,
+      "contentHash": "f3c75acfc4fbd32c2ccf49e52983c97c",
+      "sourceName": "contracts/upgradablecontracts/token/ERC721/ERC721BurnableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/ContextUpgradeable.sol",
+        "./ERC721Upgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC721BurnableUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC20/ERC20CappedUpgradeable.sol": {
+      "lastModificationDate": 1613042276371,
+      "contentHash": "2b173436d4903fc5ca3007cd041916c1",
+      "sourceName": "contracts/upgradablecontracts/token/ERC20/ERC20CappedUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./ERC20Upgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC20CappedUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/token/ERC20/ERC20BurnableUpgradeable.sol": {
+      "lastModificationDate": 1613042276363,
+      "contentHash": "1dda939f6b6b9b639897b7b11a147e5a",
+      "sourceName": "contracts/upgradablecontracts/token/ERC20/ERC20BurnableUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../../utils/ContextUpgradeable.sol",
+        "./ERC20Upgradeable.sol",
+        "../../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC20BurnableUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/introspection/ERC1820ImplementerUpgradeable.sol": {
+      "lastModificationDate": 1613042276609,
+      "contentHash": "ffc5fdcf245640c819a56c5ccaacaf98",
+      "sourceName": "contracts/upgradablecontracts/introspection/ERC1820ImplementerUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IERC1820ImplementerUpgradeable.sol",
+        "../proxy/Initializable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC1820ImplementerUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/introspection/IERC1820ImplementerUpgradeable.sol": {
+      "lastModificationDate": 1613042276603,
+      "contentHash": "b31e95ffec4624c3e19ac2a4b9236771",
+      "sourceName": "contracts/upgradablecontracts/introspection/IERC1820ImplementerUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IERC1820ImplementerUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/GSN/ContextUpgradeable.sol": {
+      "lastModificationDate": 1613042276504,
+      "contentHash": "debbad9e7cdc46ec4e1ab8dd9e69fbac",
+      "sourceName": "contracts/upgradablecontracts/GSN/ContextUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "../utils/ContextUpgradeable.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": []
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/cryptography/MerkleProofUpgradeable.sol": {
+      "lastModificationDate": 1613042276520,
+      "contentHash": "adf7b1093452af08f94eb4b032cea049",
+      "sourceName": "contracts/upgradablecontracts/cryptography/MerkleProofUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "MerkleProofUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/introspection/ERC165CheckerUpgradeable.sol": {
+      "lastModificationDate": 1613042276606,
+      "contentHash": "92acf2949d383e9e294ed4a23cf0cf51",
+      "sourceName": "contracts/upgradablecontracts/introspection/ERC165CheckerUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.2 <0.8.0"
+      ],
+      "artifacts": [
+        "ERC165CheckerUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/math/SignedSafeMathUpgradeable.sol": {
+      "lastModificationDate": 1613042276623,
+      "contentHash": "514f1fea091b49eddccefc457d3d196a",
+      "sourceName": "contracts/upgradablecontracts/math/SignedSafeMathUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SignedSafeMathUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/proxy/ClonesUpgradeable.sol": {
+      "lastModificationDate": 1613042276474,
+      "contentHash": "e7c8f7d50a71d13deb0fd1c2202d0f69",
+      "sourceName": "contracts/upgradablecontracts/proxy/ClonesUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "ClonesUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/utils/Create2Upgradeable.sol": {
+      "lastModificationDate": 1613042276578,
+      "contentHash": "bf344de47a5c402eb5ee3bb4a8b005b7",
+      "sourceName": "contracts/upgradablecontracts/utils/Create2Upgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "Create2Upgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/upgradablecontracts/utils/SafeCastUpgradeable.sol": {
+      "lastModificationDate": 1613042276596,
+      "contentHash": "2910161b0b590ef5dca8ae52bfaf8873",
+      "sourceName": "contracts/upgradablecontracts/utils/SafeCastUpgradeable.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SafeCastUpgradeable"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/sportsdapp/EIP712MetaTxn.sol": {
+      "lastModificationDate": 1613110886605,
+      "contentHash": "a3c515ae0e87463975471c4b9d1f5116",
+      "sourceName": "contracts/sportsdapp/EIP712MetaTxn.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./EIP712Base.sol",
+        "../math/SafeMath.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "EIP712MetaTxn"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/sportsdapp/EIP712Base.sol": {
+      "lastModificationDate": 1613110888747,
+      "contentHash": "8b1cf2ee373116bd1ba2c486bb5a290c",
+      "sourceName": "contracts/sportsdapp/EIP712Base.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "EIP712Base"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/sportsdapp/Sportsdapp.sol": {
+      "lastModificationDate": 1613286558499,
+      "contentHash": "8d391f3f70bd4bcf7eb7b9084548fc7a",
+      "sourceName": "contracts/sportsdapp/Sportsdapp.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./EIP712MetaTxn.sol",
+        "../synthetix/Owned.sol",
+        "@chainlink/contracts/src/v0.7/ChainlinkClient.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SportsDapp"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/sportsdapp/BaseRelayRecipient.sol": {
+      "lastModificationDate": 1613112582147,
+      "contentHash": "d9e7e67e355441af119fd0420796d9fa",
+      "sourceName": "contracts/sportsdapp/BaseRelayRecipient.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./IRelayRecipient.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "BaseRelayRecipient"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/sportsdapp/IRelayRecipient.sol": {
+      "lastModificationDate": 1613112331362,
+      "contentHash": "7d2b4ff79dc3a9f4dcf1e03f8a98300e",
+      "sourceName": "contracts/sportsdapp/IRelayRecipient.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "IRelayRecipient"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/contracts/sportsdapp/Sportsdapp1.sol": {
+      "lastModificationDate": 1613201964132,
+      "contentHash": "8d47f772f6f2f3234bbd2a82d66507e0",
+      "sourceName": "contracts/sportsdapp/Sportsdapp1.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BaseRelayRecipient.sol"
+      ],
+      "versionPragmas": [
+        ">=0.6.0 <0.8.0"
+      ],
+      "artifacts": [
+        "SportsDapp1"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/node_modules/@chainlink/contracts/src/v0.7/ChainlinkClient.sol": {
+      "lastModificationDate": 1613243035862,
+      "contentHash": "8cec8bb2681a0e97f9ec387d1219463f",
+      "sourceName": "@chainlink/contracts/src/v0.7/ChainlinkClient.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./Chainlink.sol",
+        "./interfaces/ENSInterface.sol",
+        "./interfaces/LinkTokenInterface.sol",
+        "./interfaces/ChainlinkRequestInterface.sol",
+        "./interfaces/PointerInterface.sol",
+        "./vendor/ENSResolver.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "ChainlinkClient"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/node_modules/@chainlink/contracts/src/v0.7/Chainlink.sol": {
+      "lastModificationDate": 1613243035861,
+      "contentHash": "ecf6d280d3c2e4b3a5567818c1c7ba2b",
+      "sourceName": "@chainlink/contracts/src/v0.7/Chainlink.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./vendor/CBORChainlink.sol",
+        "./vendor/BufferChainlink.sol"
+      ],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "Chainlink"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/node_modules/@chainlink/contracts/src/v0.7/interfaces/ENSInterface.sol": {
+      "lastModificationDate": 1613243036136,
+      "contentHash": "178619a1cd0a68b8572cabdb5cc16d8e",
+      "sourceName": "@chainlink/contracts/src/v0.7/interfaces/ENSInterface.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "ENSInterface"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/node_modules/@chainlink/contracts/src/v0.7/interfaces/LinkTokenInterface.sol": {
+      "lastModificationDate": 1613243036136,
+      "contentHash": "4ca5c62e50be425918543fa854df357a",
+      "sourceName": "@chainlink/contracts/src/v0.7/interfaces/LinkTokenInterface.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "LinkTokenInterface"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/node_modules/@chainlink/contracts/src/v0.7/interfaces/ChainlinkRequestInterface.sol": {
+      "lastModificationDate": 1613243036136,
+      "contentHash": "0b9fd1c50ed63bcd20401b64b5f64ebe",
+      "sourceName": "@chainlink/contracts/src/v0.7/interfaces/ChainlinkRequestInterface.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "ChainlinkRequestInterface"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/node_modules/@chainlink/contracts/src/v0.7/interfaces/PointerInterface.sol": {
+      "lastModificationDate": 1613243036136,
+      "contentHash": "907813904293a93f943d60e0957331a5",
+      "sourceName": "@chainlink/contracts/src/v0.7/interfaces/PointerInterface.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "PointerInterface"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/node_modules/@chainlink/contracts/src/v0.7/vendor/ENSResolver.sol": {
+      "lastModificationDate": 1613243036138,
+      "contentHash": "d47ec3d8b277ea19895967424a82e553",
+      "sourceName": "@chainlink/contracts/src/v0.7/vendor/ENSResolver.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "ENSResolver"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/node_modules/@chainlink/contracts/src/v0.7/vendor/CBORChainlink.sol": {
+      "lastModificationDate": 1613243036138,
+      "contentHash": "e0529460c1573d0180ec7adb75ba1dfc",
+      "sourceName": "@chainlink/contracts/src/v0.7/vendor/CBORChainlink.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [
+        "./BufferChainlink.sol"
+      ],
+      "versionPragmas": [
+        ">=0.4.19"
+      ],
+      "artifacts": [
+        "CBORChainlink"
+      ]
+    },
+    "/Users/jaspreetsingh/Desktop/projects/RelatableGameMatic/node_modules/@chainlink/contracts/src/v0.7/vendor/BufferChainlink.sol": {
+      "lastModificationDate": 1613243036137,
+      "contentHash": "581e409eaf49099a7a92f2583da5b2bf",
+      "sourceName": "@chainlink/contracts/src/v0.7/vendor/BufferChainlink.sol",
+      "solcConfig": {
+        "version": "0.7.0",
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "outputSelection": {
+            "*": {
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers"
+              ],
+              "": [
+                "ast"
+              ]
+            }
+          }
+        }
+      },
+      "imports": [],
+      "versionPragmas": [
+        "^0.7.0"
+      ],
+      "artifacts": [
+        "BufferChainlink"
+      ]
+    }
+  }
+}
