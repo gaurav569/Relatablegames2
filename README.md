@@ -1,3 +1,3 @@
 # RelatableGamesMatic
 
-https://www.notion.so/Relatable-Games-2d8bf93b4eba4ddb98fc6f75e214e865
+https://docs.google.com/document/d/1_xHEJvBdnSgqmHmbt15WjW2c-vI1KDHCJSaKWOLHyFo/edit?usp=sharing
