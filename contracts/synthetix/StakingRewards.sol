@@ -1,32 +1,35 @@
 // SPDX-License-Identifier: MIT
 pragma solidity >=0.6.0 <0.8.0;
 
-import "../math/Math.sol";
-import "../math/SafeMath.sol";
+import "../upgradablecontracts/proxy/Initializable.sol";
+import "../upgradablecontracts/math/MathUpgradeable.sol";
+import "../upgradablecontracts/math/SafeMathUpgradeable.sol";
 import "../token/ERC20/IERC20.sol";
-import "../utils/ReentrancyGuard.sol";
+import "../upgradablecontracts/utils/ReentrancyGuardUpgradeable.sol";
 
 // Inheritance
 import "./interfaces/IStakingRewards.sol";
+import "../upgradablecontracts/utils/PausableUpgradeable.sol";
+import "../upgradablecontracts/access/OwnableUpgradeable.sol";
 import "./RewardsDistributionRecipient.sol";
-import "./Pausable.sol";
 
-import "../utils/Context.sol";
+import "../upgradablecontracts/utils/ContextUpgradeable.sol";
 import "../RelatableGameContracts/IERC1155Game.sol";
 import "../RelatableGameContracts/IERC1155RG.sol";
-import "../token/ERC1155/ERC1155Holder.sol";
+import "../upgradablecontracts/token/ERC1155/ERC1155HolderUpgradeable.sol";
+import "./interfaces/IStakingRewards.sol";
 
 // https://docs.synthetix.io/contracts/source/contracts/stakingrewards
-contract StakingRewards is IStakingRewards, RewardsDistributionRecipient, ReentrancyGuard, Pausable, Context, ERC1155Holder {
-    using SafeMath for uint256;
+contract StakingRewards is Initializable, OwnableUpgradeable, IStakingRewards, RewardsDistributionRecipient, ReentrancyGuardUpgradeable, PausableUpgradeable , ERC1155HolderUpgradeable {
+    using SafeMathUpgradeable for uint256;
 
     /* ========== STATE VARIABLES ========== */
 
     IERC20 public rewardsToken;
     IERC1155 public stakingToken;
-    uint256 public periodFinish = 0;
-    uint256 public rewardRate = 0;
-    uint256 public rewardsDuration = 60;// 1 weeks 
+    uint256 public periodFinish ;
+    uint256 public rewardRate ;
+    uint256 public rewardsDuration;// 1 weeks 
     uint256 public lastUpdateTime;
     uint256 public rewardPerTokenStored;
 
@@ -44,18 +47,35 @@ contract StakingRewards is IStakingRewards, RewardsDistributionRecipient, Reentr
 
     /* ========== CONSTRUCTOR ========== */
 
-    constructor(
-        address _owner,
+    // constructor(
+    //     address _owner,
+    //     address _rewardsDistribution,
+    //     address _rewardsToken,
+    //     address _stakingToken,
+    //     address gameContract)
+    //      Owned(_owner) {
+    //         rewardsToken = IERC20(_rewardsToken);
+    //         stakingToken = IERC1155(_stakingToken);
+    //         ERC1155Game = IERC1155Game(gameContract);
+    //         rewardsDistribution = _rewardsDistribution;
+        // }
+
+    function initialize(        
         address _rewardsDistribution,
-        address _rewardsToken,
+        address _rewardsToken1,
+        address _rewardsToken2,
         address _stakingToken,
-        address gameContract)
-         Owned(_owner) {
-            rewardsToken = IERC20(_rewardsToken);
-            stakingToken = IERC1155(_stakingToken);
-            ERC1155Game = IERC1155Game(gameContract);
-            rewardsDistribution = _rewardsDistribution;
-        }
+        address _stakingTokenMultiplier )  public initializer  {
+        
+        __Ownable_init_unchained();
+        rewardsToken = IERC20(_rewardsToken1);
+        stakingToken = IERC1155(_stakingToken);
+        rewardsDistribution = _rewardsDistribution;
+
+        periodFinish = 0;
+        rewardRate = 0;
+        rewardsDuration = 2 weeks;
+    }
 
     /* ========== VIEWS ========== */
 
@@ -73,7 +93,7 @@ contract StakingRewards is IStakingRewards, RewardsDistributionRecipient, Reentr
 
 
     function lastTimeRewardApplicable() public override view returns (uint256) {
-        return Math.min(block.timestamp, periodFinish);
+        return MathUpgradeable.min(block.timestamp,periodFinish);
     }
 
     function rewardPerToken() public override view returns (uint256) {
@@ -96,14 +116,14 @@ contract StakingRewards is IStakingRewards, RewardsDistributionRecipient, Reentr
 
     /* ========== MUTATIVE FUNCTIONS ========== */
 
-    function stake(uint256 tokenId, uint256 quantity ) external override nonReentrant notPaused updateReward(_msgSender()) {
+    function stake(uint256 tokenId, uint256 quantity ) external override nonReentrant whenNotPaused updateReward(_msgSender()) {
         
         uint8 tokenType=ERC1155Game.getTokenType(tokenId);
         uint256 amount;
     
         if(tokenType==1 || tokenType==2){
             
-            amount=SafeMath.mul(1000,quantity);
+            amount=quantity.mul(1000);
 
         }else if(tokenType==3){
 
@@ -114,8 +134,8 @@ contract StakingRewards is IStakingRewards, RewardsDistributionRecipient, Reentr
             uint256 ingredients=burnTokenIdRequired.length;
 
             // cube of no of ingredients
-            uint256 cubeIngredients=SafeMath.mul(ingredients,SafeMath.mul(ingredients,ingredients));
-            amount=SafeMath.add(1000,SafeMath.mul(cubeIngredients,quantity));
+            uint256 cubeIngredients=ingredients.mul(ingredients.mul(ingredients));
+            amount=cubeIngredients.mul(quantity).add(1000);
 
             //1000+x^3
         }
@@ -137,7 +157,7 @@ contract StakingRewards is IStakingRewards, RewardsDistributionRecipient, Reentr
     
         if(tokenType==1 || tokenType==2){
             
-            amount=SafeMath.mul(1000,quantity);
+            amount=quantity.mul(1000);
 
         }else if(tokenType==3){
 
@@ -149,9 +169,8 @@ contract StakingRewards is IStakingRewards, RewardsDistributionRecipient, Reentr
             uint256 ingredients=burnTokenIdRequired.length;
 
             // cube of no of ingredients
-            uint256 cubeIngredients=SafeMath.mul(ingredients,SafeMath.mul(ingredients,ingredients));
-            amount=SafeMath.add(1000,SafeMath.mul(cubeIngredients,quantity));
-
+            uint256 cubeIngredients=ingredients.mul(ingredients.mul(ingredients));
+            amount=cubeIngredients.mul(quantity).add(1000);
         }
 
         require(amount > 0, "Cannot withdraw 0");
@@ -208,6 +227,7 @@ contract StakingRewards is IStakingRewards, RewardsDistributionRecipient, Reentr
     // Added to support recovering LP Rewards from other systems such as BAL to be distributed to holders
     function recoverERC20(address tokenAddress, uint256 tokenAmount) external onlyOwner {
 
+        address owner = OwnableUpgradeable.owner();
         IERC20(tokenAddress).transfer(owner, tokenAmount);
         emit Recovered(tokenAddress, tokenAmount);
     }

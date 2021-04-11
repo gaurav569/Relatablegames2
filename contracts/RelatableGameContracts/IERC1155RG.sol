@@ -37,6 +37,10 @@ interface IERC1155 is IERC165 {
      */
     event URI(string value, uint256 indexed id);
 
+    function totalSupply(
+        uint256 _id
+    ) external view returns (uint256);
+    
     /**
      * @dev Returns the amount of tokens of token type `id` owned by `account`.
      *

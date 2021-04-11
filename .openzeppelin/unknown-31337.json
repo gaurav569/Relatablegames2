@@ -1,0 +1,210 @@
+{
+  "manifestVersion": "3.1",
+  "impls": {
+    "7029d6ce3b0470b92ca7be69b1e8761c6b8053e5d1b953a37f5d02bc2546f82e": {
+      "address": "0xc0F115A19107322cFBf1cDBC7ea011C19EbDB4F8",
+      "txHash": "0x07d6e007258cfe4f04fa03c01f724ccc9e21ef47733c65d83067ef20f4d17f0e",
+      "layout": {
+        "storage": [
+          {
+            "contract": "Initializable",
+            "label": "_initialized",
+            "type": "t_bool",
+            "src": "contracts/upgradablecontracts/proxy/Initializable.sol:25"
+          },
+          {
+            "contract": "Initializable",
+            "label": "_initializing",
+            "type": "t_bool",
+            "src": "contracts/upgradablecontracts/proxy/Initializable.sol:30"
+          },
+          {
+            "contract": "ContextUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)50_storage",
+            "src": "contracts/upgradablecontracts/utils/ContextUpgradeable.sol:31"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "_owner",
+            "type": "t_address",
+            "src": "contracts/upgradablecontracts/access/OwnableUpgradeable.sol:20"
+          },
+          {
+            "contract": "OwnableUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "contracts/upgradablecontracts/access/OwnableUpgradeable.sol:74"
+          },
+          {
+            "contract": "ReentrancyGuardUpgradeable",
+            "label": "_status",
+            "type": "t_uint256",
+            "src": "contracts/upgradablecontracts/utils/ReentrancyGuardUpgradeable.sol:37"
+          },
+          {
+            "contract": "ReentrancyGuardUpgradeable",
+            "label": "__gap",
+            "type": "t_array(t_uint256)49_storage",
+            "src": "contracts/upgradablecontracts/utils/ReentrancyGuardUpgradeable.sol:67"
+          },
+          {
+            "contract": "ERC1155Game",
+            "label": "ERC1155Token",
+            "type": "t_contract(IERC1155)3509",
+            "src": "contracts/RelatableGameContracts/ERC1155Game.sol:16"
+          },
+          {
+            "contract": "ERC1155Game",
+            "label": "tokenNames",
+            "type": "t_mapping(t_uint8,t_contract(IERC20)3604)",
+            "src": "contracts/RelatableGameContracts/ERC1155Game.sol:23"
+          },
+          {
+            "contract": "ERC1155Game",
+            "label": "fixPriceMap",
+            "type": "t_mapping(t_uint256,t_mapping(t_uint8,t_uint256))",
+            "src": "contracts/RelatableGameContracts/ERC1155Game.sol:26"
+          },
+          {
+            "contract": "ERC1155Game",
+            "label": "bidMap",
+            "type": "t_mapping(t_uint256,t_struct(Bids)1222_storage)",
+            "src": "contracts/RelatableGameContracts/ERC1155Game.sol:45"
+          },
+          {
+            "contract": "ERC1155Game",
+            "label": "beneficiary",
+            "type": "t_address",
+            "src": "contracts/RelatableGameContracts/ERC1155Game.sol:46"
+          },
+          {
+            "contract": "ERC1155Game",
+            "label": "timePeriodBid",
+            "type": "t_uint256",
+            "src": "contracts/RelatableGameContracts/ERC1155Game.sol:48"
+          },
+          {
+            "contract": "ERC1155Game",
+            "label": "tokenType",
+            "type": "t_mapping(t_uint256,t_struct(TokenType)1331_storage)",
+            "src": "contracts/RelatableGameContracts/ERC1155Game.sol:83"
+          }
+        ],
+        "types": {
+          "t_contract(IERC1155)3509": {
+            "label": "contract IERC1155"
+          },
+          "t_mapping(t_uint8,t_contract(IERC20)3604)": {
+            "label": "mapping(uint8 => contract IERC20)"
+          },
+          "t_uint8": {
+            "label": "uint8"
+          },
+          "t_contract(IERC20)3604": {
+            "label": "contract IERC20"
+          },
+          "t_mapping(t_uint256,t_mapping(t_uint8,t_uint256))": {
+            "label": "mapping(uint256 => mapping(uint8 => uint256))"
+          },
+          "t_uint256": {
+            "label": "uint256"
+          },
+          "t_mapping(t_uint8,t_uint256)": {
+            "label": "mapping(uint8 => uint256)"
+          },
+          "t_mapping(t_uint256,t_struct(Bids)1222_storage)": {
+            "label": "mapping(uint256 => struct ERC1155Game.Bids)"
+          },
+          "t_struct(Bids)1222_storage": {
+            "label": "struct ERC1155Game.Bids",
+            "members": [
+              {
+                "label": "bidIncrement",
+                "type": "t_uint256"
+              },
+              {
+                "label": "startTime",
+                "type": "t_uint256"
+              },
+              {
+                "label": "endTime",
+                "type": "t_uint256"
+              },
+              {
+                "label": "basePrice",
+                "type": "t_uint256"
+              },
+              {
+                "label": "canceled",
+                "type": "t_bool"
+              },
+              {
+                "label": "highestBid",
+                "type": "t_uint256"
+              },
+              {
+                "label": "highestBidder",
+                "type": "t_address"
+              },
+              {
+                "label": "fundsByBidder",
+                "type": "t_mapping(t_address,t_uint256)"
+              },
+              {
+                "label": "ownerHasWithdrawn",
+                "type": "t_bool"
+              },
+              {
+                "label": "tokenName",
+                "type": "t_uint8"
+              }
+            ]
+          },
+          "t_bool": {
+            "label": "bool"
+          },
+          "t_address": {
+            "label": "address"
+          },
+          "t_mapping(t_address,t_uint256)": {
+            "label": "mapping(address => uint256)"
+          },
+          "t_mapping(t_uint256,t_struct(TokenType)1331_storage)": {
+            "label": "mapping(uint256 => struct ERC1155Game.TokenType)"
+          },
+          "t_struct(TokenType)1331_storage": {
+            "label": "struct ERC1155Game.TokenType",
+            "members": [
+              {
+                "label": "_type",
+                "type": "t_uint8"
+              },
+              {
+                "label": "burnTokenIdRequired",
+                "type": "t_array(t_uint256)dyn_storage"
+              },
+              {
+                "label": "burnTokensQtyRequired",
+                "type": "t_array(t_uint256)dyn_storage"
+              }
+            ]
+          },
+          "t_array(t_uint256)dyn_storage": {
+            "label": "uint256[]"
+          },
+          "t_array(t_uint256)49_storage": {
+            "label": "uint256[49]"
+          },
+          "t_array(t_uint256)50_storage": {
+            "label": "uint256[50]"
+          }
+        }
+      }
+    }
+  },
+  "admin": {
+    "address": "0xc96304e3c037f81dA488ed9dEa1D8F2a48278a75",
+    "txHash": "0x5d9161df78c32ed288882c84f90d61fb6051bc5a7a61218b76e0b16fb3bef17b"
+  }
+}

@@ -2,11 +2,11 @@
 pragma solidity >=0.6.0 <0.8.0;
 
 // Inheritance
-import "./Owned.sol";
+import "../upgradablecontracts/access/OwnableUpgradeable.sol";
 
 
 // https://docs.synthetix.io/contracts/source/contracts/rewardsdistributionrecipient
-abstract contract RewardsDistributionRecipient is Owned {
+abstract contract RewardsDistributionRecipient is OwnableUpgradeable {
     address public rewardsDistribution;
 
     function notifyRewardAmount(uint256 reward) external virtual;

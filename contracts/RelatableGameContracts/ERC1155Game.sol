@@ -8,7 +8,7 @@ import "./IERC1155RG.sol";
 import "./IERC20.sol";
 import "../upgradablecontracts/utils/ReentrancyGuardUpgradeable.sol";
 
-contract ERC1155Game is  OwnableUpgradeable,ReentrancyGuardUpgradeable{
+contract ERC1155Game is  OwnableUpgradeable, ReentrancyGuardUpgradeable{
 
     using Math for uint256;
     using SafeMath for uint256;
@@ -25,24 +25,27 @@ contract ERC1155Game is  OwnableUpgradeable,ReentrancyGuardUpgradeable{
     //tokenid-> tokenname-> Fix price of ingredient
     mapping(uint256=> mapping(uint8 => uint256)) private fixPriceMap;
 
-    struct Bids{
-    uint  bidIncrement;
-    uint  startTime;
-    uint  endTime;
-    uint256  basePrice;
+    //tokenid-> tokenname-> Variable fix price of ingredient
+    mapping(uint256=> mapping(uint8 => uint256)) private fixVarPriceMap;
 
-    // state
-    bool  canceled;
-    uint256  highestBid;
-    address  highestBidder;
-    mapping(address => uint256) fundsByBidder;
-    bool ownerHasWithdrawn;
+    // struct Bids{
+    // uint  bidIncrement;
+    // uint  startTime;
+    // uint  endTime;
+    // uint256  basePrice;
 
-    uint8 tokenName;    
-    }
+    // // state
+    // bool  canceled;
+    // uint256  highestBid;
+    // address  highestBidder;
+    // mapping(address => uint256) fundsByBidder;
+    // bool ownerHasWithdrawn;
 
-    //tokenid-> Bids
-    mapping(uint256 => Bids) private bidMap;
+    // uint8 tokenName;    
+    // }
+
+    // //tokenid-> Bids
+    // mapping(uint256 => Bids) private bidMap;
     address private beneficiary;
 
     uint timePeriodBid;
@@ -50,10 +53,10 @@ contract ERC1155Game is  OwnableUpgradeable,ReentrancyGuardUpgradeable{
     event LogSale(uint256 tokenId, uint256[] fixPrices);
     event LogBuy(uint256 tokenId, uint8 _tokenName, address buyer);
 
-    event LogCreate(uint256 tokenId,  uint _startTime, uint _endTime, uint256 _bidIncrement, uint256  _basePrice);
-    event LogBid(uint256 tokenId, address bidder, uint bid);
-    event LogWithdrawal(uint256 tokenId, address withdrawalAccount, uint amount);
-    event LogCanceled(uint256 tokenId);
+    // event LogCreate(uint256 tokenId,  uint _startTime, uint _endTime, uint256 _bidIncrement, uint256  _basePrice);
+    // event LogBid(uint256 tokenId, address bidder, uint bid);
+    // event LogWithdrawal(uint256 tokenId, address withdrawalAccount, uint amount);
+    // event LogCanceled(uint256 tokenId);
 
     event CookedDish(uint256 tokenId, address owner);
 
@@ -111,7 +114,7 @@ contract ERC1155Game is  OwnableUpgradeable,ReentrancyGuardUpgradeable{
             return address(tokenNames[index]);
     }
 
-    //class=1=>fix price or 2=>bidding
+    //class=1=>fix price or 2=>fix price variable
     function createIngredientNFT(address to, uint256 initialSupply, string calldata _Uri,
         bytes calldata _data, uint8 _class) public onlyOwner nonReentrant returns (uint256){
 
@@ -125,7 +128,8 @@ contract ERC1155Game is  OwnableUpgradeable,ReentrancyGuardUpgradeable{
 
     }
 
-    function fixSaleNFT(uint256 id, uint256[] memory fixPrice) public onlyOwner returns(bool){
+    //type 1 constant price
+    function fixSale1NFT(uint256 id, uint256[] memory fixPrice) public onlyOwner returns(bool){
 
         require(tokenType[id]._type==1,"ERC1155Game: The token type should be 1");
         
@@ -137,7 +141,21 @@ contract ERC1155Game is  OwnableUpgradeable,ReentrancyGuardUpgradeable{
 
     }
 
-    function buyIngredientNFT(uint256 id, uint8 _tokenName) public nonReentrant payable returns(bool){
+    //type 2 variable price
+    function fixSale2NFT(uint256 id, uint256[] memory fixPrice) public onlyOwner returns(bool){
+
+        require(tokenType[id]._type==2,"ERC1155Game: The token type should be 2");
+        
+        for(uint8 i=0;i<fixPrice.length;i++)
+            fixVarPriceMap[id][i]=fixPrice[i];
+
+        emit LogSale(id, fixPrice);
+        return true;
+
+    }
+
+    //type 1 constant price
+    function buyIngredient1NFT(uint256 id, uint8 _tokenName) public nonReentrant payable returns(bool){
 
         //transfer ERC20 tokens to recipient
         // if fixprice is transferred
@@ -146,6 +164,29 @@ contract ERC1155Game is  OwnableUpgradeable,ReentrancyGuardUpgradeable{
 
         IERC20 ERC20Token = tokenNames[_tokenName];
         ERC20Token.transferFrom(_msgSender(), beneficiary, fixPriceMap[id][_tokenName]);
+
+        ERC1155Token.mint(_msgSender(), id, 1, "0x");
+
+        emit LogBuy(id,_tokenName,_msgSender());
+
+        return true;
+    }
+
+    //type 2 variable price
+    function buyIngredient2NFT(uint256 id, uint8 _tokenName) public nonReentrant payable returns(bool){
+
+        //transfer ERC20 tokens to recipient
+        // if fixprice is transferred
+        require(tokenType[id]._type==2,"ERC1155Game: The token type should be 2");
+        require(fixVarPriceMap[id][_tokenName]>0,"Cannot buy using this token");
+
+        uint totalSupply = ERC1155Token.totalSupply(id);
+        // y = x^2+1 => Factor = (x^2+1)/100 +1 => (x^2+101)/100
+        uint multiplyFactor =SafeMath.div(SafeMath.add(SafeMath.mul(totalSupply,2),101),100);
+        uint currPrice = SafeMath.mul(fixVarPriceMap[id][_tokenName], multiplyFactor);
+
+        IERC20 ERC20Token = tokenNames[_tokenName];
+        ERC20Token.transferFrom(_msgSender(), beneficiary, currPrice);
 
         ERC1155Token.mint(_msgSender(), id, 1, "0x");
 
@@ -186,126 +227,126 @@ contract ERC1155Game is  OwnableUpgradeable,ReentrancyGuardUpgradeable{
         
     }
 
-    // 1 day by default
-    function changeTimeBid(uint _timePeriodBid) external onlyOwner{
-        timePeriodBid=_timePeriodBid;
-    }
+    // // 1 day by default
+    // function changeTimeBid(uint _timePeriodBid) external onlyOwner{
+    //     timePeriodBid=_timePeriodBid;
+    // }
 
-    // will be available for 24 hours // token type=2, USDC
-    function createAuction(uint256 tokenId, uint _bidIncrement, uint256 _basePrice, uint8 _tokenName) public onlyOwner returns (bool){
+    // // will be available for 24 hours // token type=2, USDC
+    // function createAuction(uint256 tokenId, uint _bidIncrement, uint256 _basePrice, uint8 _tokenName) public onlyOwner returns (bool){
 
-            require(tokenType[tokenId]._type==2, "Type of NFT token should be 2");
-            // check if already auction had same tokenid
-            if(bidMap[tokenId].ownerHasWithdrawn!=true){
-                require(block.timestamp>bidMap[tokenId].endTime,"Earlier auction not finished");
-            }
+    //         require(tokenType[tokenId]._type==2, "Type of NFT token should be 2");
+    //         // check if already auction had same tokenid
+    //         if(bidMap[tokenId].ownerHasWithdrawn!=true){
+    //             require(block.timestamp>bidMap[tokenId].endTime,"Earlier auction not finished");
+    //         }
 
-            bidMap[tokenId].bidIncrement = _bidIncrement;
-            bidMap[tokenId].startTime = block.timestamp;
-            bidMap[tokenId].endTime = block.timestamp+timePeriodBid;
-            bidMap[tokenId].basePrice = _basePrice;
-            bidMap[tokenId].canceled = false;
-            bidMap[tokenId].ownerHasWithdrawn = false;
-            bidMap[tokenId].tokenName = _tokenName;
-            bidMap[tokenId].highestBidder = address(this);//default
+    //         bidMap[tokenId].bidIncrement = _bidIncrement;
+    //         bidMap[tokenId].startTime = block.timestamp;
+    //         bidMap[tokenId].endTime = block.timestamp+timePeriodBid;
+    //         bidMap[tokenId].basePrice = _basePrice;
+    //         bidMap[tokenId].canceled = false;
+    //         bidMap[tokenId].ownerHasWithdrawn = false;
+    //         bidMap[tokenId].tokenName = _tokenName;
+    //         bidMap[tokenId].highestBidder = address(this);//default
 
-            LogCreate(tokenId,  block.timestamp,  block.timestamp+timePeriodBid,  _bidIncrement,  _basePrice);
+    //         LogCreate(tokenId,  block.timestamp,  block.timestamp+timePeriodBid,  _bidIncrement,  _basePrice);
 
-            return true;
-        }
+    //         return true;
+    //     }
 
-        function getHighestBid(uint256 tokenId) public view
-            returns (uint)
-        {
-            return bidMap[tokenId].highestBid;
-        }
+    //     function getHighestBid(uint256 tokenId) public view
+    //         returns (uint)
+    //     {
+    //         return bidMap[tokenId].highestBid;
+    //     }
 
-        function placeBid(uint256 tokenId, uint256 _amount)  public
+    //     function placeBid(uint256 tokenId, uint256 _amount)  public
             
             
-            returns (bool)
-        {
-            require (block.timestamp > bidMap[tokenId].startTime,"Bidding not yet started" );
-            require (block.timestamp < bidMap[tokenId].endTime, "Bidding already ended" );
-            require (bidMap[tokenId].canceled==false, "Bidding already canceled" );
+    //         returns (bool)
+    //     {
+    //         require (block.timestamp > bidMap[tokenId].startTime,"Bidding not yet started" );
+    //         require (block.timestamp < bidMap[tokenId].endTime, "Bidding already ended" );
+    //         require (bidMap[tokenId].canceled==false, "Bidding already canceled" );
 
-            // if the user isn't even willing to overbid the highest binding bid, there's nothing for us
-            // to do except revert the transaction.
+    //         // if the user isn't even willing to overbid the highest binding bid, there's nothing for us
+    //         // to do except revert the transaction.
 
 
-            // calculate the user's total bid based on the current amount they've sent to the contract
-            // plus whatever has been sent with this transaction
-            uint256 newBid = SafeMath.add(bidMap[tokenId].fundsByBidder[_msgSender()] , _amount);
-            require(newBid>= SafeMath.add(bidMap[tokenId].highestBid,bidMap[tokenId].bidIncrement) && _amount>=bidMap[tokenId].basePrice,"Bidding amount should be more than highest/base bid by bidIncrement");
+    //         // calculate the user's total bid based on the current amount they've sent to the contract
+    //         // plus whatever has been sent with this transaction
+    //         uint256 newBid = SafeMath.add(bidMap[tokenId].fundsByBidder[_msgSender()] , _amount);
+    //         require(newBid>= SafeMath.add(bidMap[tokenId].highestBid,bidMap[tokenId].bidIncrement) && _amount>=bidMap[tokenId].basePrice,"Bidding amount should be more than highest/base bid by bidIncrement");
 
-            uint8 _tokenName=bidMap[tokenId].tokenName;
-            IERC20 ERC20Token = tokenNames[_tokenName];
-            ERC20Token.transferFrom(_msgSender(), address(this), _amount);
+    //         uint8 _tokenName=bidMap[tokenId].tokenName;
+    //         IERC20 ERC20Token = tokenNames[_tokenName];
+    //         ERC20Token.transferFrom(_msgSender(), address(this), _amount);
 
-            bidMap[tokenId].fundsByBidder[_msgSender()] = newBid;
+    //         bidMap[tokenId].fundsByBidder[_msgSender()] = newBid;
 
-            bidMap[tokenId].highestBidder = _msgSender();
-            bidMap[tokenId].highestBid = newBid;
+    //         bidMap[tokenId].highestBidder = _msgSender();
+    //         bidMap[tokenId].highestBid = newBid;
         
-            emit LogBid(tokenId, _msgSender(), newBid);
-            return true;
-        }
+    //         emit LogBid(tokenId, _msgSender(), newBid);
+    //         return true;
+    //     }
 
-        function auctionEnd(uint256 tokenId) public onlyOwner {
+    //     function auctionEnd(uint256 tokenId) public onlyOwner {
 
-            // require ( block.timestamp > bidMap[tokenId].endTime, "Bidding canceled or not ended" );
-            require(!bidMap[tokenId].ownerHasWithdrawn, "auctionEnd has already been called.");
-            require (bidMap[tokenId].highestBidder!=address(this), "Noone participated in bid");
+    //         // require ( block.timestamp > bidMap[tokenId].endTime, "Bidding canceled or not ended" );
+    //         require(!bidMap[tokenId].ownerHasWithdrawn, "auctionEnd has already been called.");
+    //         require (bidMap[tokenId].highestBidder!=address(this), "Noone participated in bid");
 
-            ERC1155Token.mint(bidMap[tokenId].highestBidder,tokenId,1,"");
+    //         ERC1155Token.mint(bidMap[tokenId].highestBidder,tokenId,1,"");
             
-            IERC20 ERC20Token = tokenNames[bidMap[tokenId].tokenName];
-            ERC20Token.transfer(beneficiary,bidMap[tokenId].highestBid);
+    //         IERC20 ERC20Token = tokenNames[bidMap[tokenId].tokenName];
+    //         ERC20Token.transfer(beneficiary,bidMap[tokenId].highestBid);
 
-            bidMap[tokenId].ownerHasWithdrawn = true;
+    //         bidMap[tokenId].ownerHasWithdrawn = true;
 
-        }
+    //     }
 
-        function cancelAuction(uint256 tokenId)  public
-            onlyOwner
-            returns (bool)
-        {
-            require (bidMap[tokenId].canceled==false, "Bidding already canceled" );
-            require (block.timestamp < bidMap[tokenId].endTime, "Bidding already ended" );
-            require (bidMap[tokenId].highestBidder==address(this), "Cannot cancel once bidding starts" );
+    //     function cancelAuction(uint256 tokenId)  public
+    //         onlyOwner
+    //         returns (bool)
+    //     {
+    //         require (bidMap[tokenId].canceled==false, "Bidding already canceled" );
+    //         require (block.timestamp < bidMap[tokenId].endTime, "Bidding already ended" );
+    //         require (bidMap[tokenId].highestBidder==address(this), "Cannot cancel once bidding starts" );
 
-            bidMap[tokenId].canceled = true;
-            LogCanceled(tokenId);
-            return true;
-        }
+    //         bidMap[tokenId].canceled = true;
+    //         LogCanceled(tokenId);
+    //         return true;
+    //     }
 
-        function withdraw(uint256 tokenId) public 
-            nonReentrant
-            returns (bool)
-        {
+    //     function withdraw(uint256 tokenId) public 
+    //         nonReentrant
+    //         returns (bool)
+    //     {
 
-            // require ( block.timestamp > bidMap[tokenId].endTime, "Bidding canceled or not ended" );
-            require ( _msgSender() != bidMap[tokenId].highestBidder, "Highest bidder can't withdraw" );
+    //         // require ( block.timestamp > bidMap[tokenId].endTime, "Bidding canceled or not ended" );
+    //         require ( _msgSender() != bidMap[tokenId].highestBidder, "Highest bidder can't withdraw" );
         
-            // anyone who participated but did not win the bidMap[tokenId] should be allowed to withdraw
-            // the full amount of their funds
-            address payable withdrawalAccount = _msgSender();
-            uint256 withdrawalAmount = bidMap[tokenId].fundsByBidder[withdrawalAccount];
+    //         // anyone who participated but did not win the bidMap[tokenId] should be allowed to withdraw
+    //         // the full amount of their funds
+    //         address payable withdrawalAccount = _msgSender();
+    //         uint256 withdrawalAmount = bidMap[tokenId].fundsByBidder[withdrawalAccount];
                 
 
-            if (withdrawalAmount == 0) revert();
+    //         if (withdrawalAmount == 0) revert();
 
-            bidMap[tokenId].fundsByBidder[withdrawalAccount] -= withdrawalAmount;
+    //         bidMap[tokenId].fundsByBidder[withdrawalAccount] -= withdrawalAmount;
 
-            // send the funds
+    //         // send the funds
 
-            IERC20 ERC20Token = tokenNames[bidMap[tokenId].tokenName];
-            ERC20Token.transfer(withdrawalAccount, withdrawalAmount);
+    //         IERC20 ERC20Token = tokenNames[bidMap[tokenId].tokenName];
+    //         ERC20Token.transfer(withdrawalAccount, withdrawalAmount);
 
-            emit LogWithdrawal(tokenId, withdrawalAccount, withdrawalAmount);
+    //         emit LogWithdrawal(tokenId, withdrawalAccount, withdrawalAmount);
 
-            return true;
-        }
+    //         return true;
+    //     }
 
 
 
