@@ -8,7 +8,7 @@ async function main(){
     const [caller]=await ethers.getSigners();
     console.log('caller acct: '+caller.address);
     
-    const tokenAddress="0xd9F7B3B335a3361b67a245A82cdC63633A86bc31";
+    const tokenAddress="0xe1307F473b609E18037813D7F719677E7523f939";
     Token=await ethers.getContractFactory('ERC20RG');
     const token = await Token.attach(tokenAddress);
     // owner = await token.owner();
@@ -17,11 +17,11 @@ async function main(){
 
 
     ERC1155=await ethers.getContractFactory('ERC1155RG');
-    const erc1155 = await ERC1155.attach("0x964f7F97F40F4c5E6fCdfC6CA801377B1253c8FA");
+    const erc1155 = await ERC1155.attach("0x35198B2fDB374BFbf6b86194f660C8E266680e23");
 
     Game=await ethers.getContractFactory('ERC1155Game');
 
-    const game = await Game.attach("0x292cF01d33705fd9a840E682ae3200bd186A3759");
+    const game = await Game.attach("0xc8bFC92eb4Aaf6d450cC7CD17dAd22B90b3aDb66");
 
     // await erc1155.setContract(game.address);
 
@@ -29,24 +29,24 @@ async function main(){
 
     // await token.approve(game.address,"20000000000000000000000000");
 
-    tokenId = await game.createIngredientNFT(caller.address, 0, "initialURI", "0x" ,2);
-    console.log("fix sale tokenid: ");
-    console.log(tokenId.value);
+    // tokenId = await game.createIngredientNFT(caller.address, 0, "initialURI", "0x" ,2);
+    // console.log("fix sale tokenid: ");
+    // console.log(tokenId.value);
 
-    currID= await erc1155.totalIDs();
-    console.log(currID)
-    totalSupply= await erc1155.totalSupply(currID);
-    console.log(totalSupply)
-    await sleep(4000);
+    // currID= await erc1155.totalIDs();
+    // console.log(currID)
+    // totalSupply= await erc1155.totalSupply(currID);
+    // console.log(totalSupply)
+    // await sleep(4000);
 
 
-    await game.fixSale2NFT(currID, ["10","20000000000000000000"]);
+    // await game.fixSale2NFT(1, ["10","20000000000000000000"]);
 
-    await sleep(4000);
+    // await sleep(4000);
 
     console.log("buy from sale");
 
-    await game.buyIngredient2NFT(currID, 1);
+    await game.buyIngredient2NFT(1, 1);
 
     // balanceOf = await token.balanceOf(caller.address,1);
     // console.log("Token balance", balanceOf.toString());

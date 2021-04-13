@@ -52,6 +52,26 @@ contract ERC1155Game is  OwnableUpgradeable, ReentrancyGuardUpgradeable{
 
     uint timePeriodBid;
 
+    struct TokenType{
+
+        uint8 _type; //ingredient NFT=1 (fix price )or 2(bidding) or Dish NFT=3
+        uint256[] burnTokenIdRequired;
+        uint256[] burnTokensQtyRequired;
+        
+    }
+
+    // tokenID => TokenType
+    mapping (uint256 => TokenType) private tokenType;
+    
+    // to map current multiply factor like 1.1 * 1.1 ....
+    mapping(uint256 => uint256) private currMultiplyFactorVarPrice;
+
+    address public manager; // address used to set Admins
+    address[] public Admins;
+    mapping(address => bool) public AdminByAddress;
+
+    event SetAdmins(address[] Admins);
+
 
     event LogSale(uint256 tokenId, uint256[] fixPrices);
     event LogBuy(uint256 tokenId, uint8 _tokenName, address buyer);
@@ -77,20 +97,6 @@ contract ERC1155Game is  OwnableUpgradeable, ReentrancyGuardUpgradeable{
     }
 
 
-    struct TokenType{
-
-        uint8 _type; //ingredient NFT=1 (fix price )or 2(bidding) or Dish NFT=3
-        uint256[] burnTokenIdRequired;
-        uint256[] burnTokensQtyRequired;
-        
-    }
-
-    // tokenID => TokenType
-    mapping (uint256 => TokenType) private tokenType;
-    
-    // to map current multiply factor like 1.1 * 1.1 ....
-    mapping(uint256 => uint256) private currMultiplyFactorVarPrice;
-
     function getTokenType(uint256 tokenId) public view
             returns (uint8){
 
@@ -105,7 +111,7 @@ contract ERC1155Game is  OwnableUpgradeable, ReentrancyGuardUpgradeable{
 
     // provide coin address & index to be used in tokenNames
     // Note index=0 => MATIC coin,  index=1 => USDC coin,   index=2 => DAI coin
-    function addERC20Coin(address coinAddress, uint8 index) public onlyOwner returns(bool){
+    function addERC20Coin(address coinAddress, uint8 index) public onlyAdmin returns(bool){
 
         require(address(tokenNames[index])==address(0), "Already mapped index");
         tokenNames[index] = IERC20(coinAddress);
@@ -122,7 +128,7 @@ contract ERC1155Game is  OwnableUpgradeable, ReentrancyGuardUpgradeable{
 
     //class=1=>fix price or 2=>fix price variable
     function createIngredientNFT(address to, uint256 initialSupply, string calldata _Uri,
-        bytes calldata _data, uint8 _class) public onlyOwner nonReentrant returns (uint256){
+        bytes calldata _data, uint8 _class) public onlyAdmin nonReentrant returns (uint256){
 
         uint256 id = ERC1155Token.create( to,  initialSupply,  _Uri,  _data);
 
@@ -135,7 +141,7 @@ contract ERC1155Game is  OwnableUpgradeable, ReentrancyGuardUpgradeable{
     }
 
     //type 1 constant price
-    function fixSale1NFT(uint256 id, uint256[] memory fixPrice) public onlyOwner returns(bool){
+    function fixSale1NFT(uint256 id, uint256[] memory fixPrice) public onlyAdmin returns(bool){
 
         require(tokenType[id]._type==1,"ERC1155Game: The token type should be 1");
         
@@ -148,7 +154,7 @@ contract ERC1155Game is  OwnableUpgradeable, ReentrancyGuardUpgradeable{
     }
 
     //type 2 variable price
-    function fixSale2NFT(uint256 id, uint256[] memory fixPrice) public onlyOwner returns(bool){
+    function fixSale2NFT(uint256 id, uint256[] memory fixPrice) public onlyAdmin returns(bool){
 
         require(tokenType[id]._type==2,"ERC1155Game: The token type should be 2");
         
@@ -217,7 +223,7 @@ contract ERC1155Game is  OwnableUpgradeable, ReentrancyGuardUpgradeable{
 
     function createDishNFT(address to, uint256 initialSupply, string calldata _Uri,
         bytes calldata _data, uint256[] memory _burnTokenIdRequired, uint256[] memory _burnTokensQtyRequired) 
-        public onlyOwner nonReentrant returns (uint256){
+        public onlyAdmin nonReentrant returns (uint256){
 
         uint256 id = ERC1155Token.create( to,  initialSupply,  _Uri,  _data);
 
@@ -246,6 +252,49 @@ contract ERC1155Game is  OwnableUpgradeable, ReentrancyGuardUpgradeable{
         
     }
 
+
+   
+    modifier onlyAdmin() {
+        require(AdminByAddress[_msgSender()] == true);
+        _;
+    }
+
+    /**
+     * @dev MultiOwnable constructor sets the manager
+     */
+        // constructor(address _Admin) {
+        //     require(_Admin != address(0), "Admin address cannot be 0");
+        //     manager = _Admin;
+        // }
+    
+    /**
+     * @dev Function to set Admins addresses
+     */
+    function setAdmins(address[] memory _Admins) public onlyOwner {
+        _setAdmins(_Admins);
+
+    }
+
+    function _setAdmins(address[] memory _Admins) internal {
+        for(uint256 i = 0; i < Admins.length; i++) {
+            AdminByAddress[Admins[i]] = false;
+        }
+
+
+        for(uint256 j = 0; j < _Admins.length; j++) {
+            AdminByAddress[_Admins[j]] = true;
+        }
+        Admins = _Admins;
+        emit SetAdmins(_Admins);
+    }
+
+    function getAdmins() public  view returns (address[] memory) {
+        return Admins;
+    }
+
+   
+
+   
     // // 1 day by default
     // function changeTimeBid(uint _timePeriodBid) external onlyOwner{
     //     timePeriodBid=_timePeriodBid;

@@ -43,6 +43,8 @@ async function main(){
     
     // set contract on erc1155 token as game contract
     await erc1155.setContract(game.address);
+    await game.setAdmins([deployer.address])
+
     await game.addERC20Coin(erc20.address, 1);
 
     // changing to 1 week 
