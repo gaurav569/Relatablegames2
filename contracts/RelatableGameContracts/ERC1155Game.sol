@@ -182,14 +182,18 @@ contract ERC1155Game is  OwnableUpgradeable, ReentrancyGuardUpgradeable{
 
         uint totalSupply = ERC1155Token.totalSupply(id);
         // y = x^2+1 => Factor = (x^2+1)/100 +1 => (x^2+101)/100
-        uint multiplyFactor =SafeMath.div(SafeMath.add(SafeMath.mul(totalSupply,2),101),100);
+        // uint multiplyFactor =SafeMath.div(SafeMath.add(SafeMath.mul(totalSupply,2),101),100);
+        // multiply factor is 1.1
+        uint multiplyFactor =SafeMath.div(110,100);
         uint currPrice = SafeMath.mul(fixVarPriceMap[id][_tokenName], multiplyFactor);
 
         IERC20 ERC20Token = tokenNames[_tokenName];
         ERC20Token.transferFrom(_msgSender(), beneficiary, currPrice);
 
         ERC1155Token.mint(_msgSender(), id, 1, "0x");
-
+        
+        // update the current price
+        fixVarPriceMap[id][_tokenName] = currPrice;
         emit LogBuy(id,_tokenName,_msgSender());
 
         return true;
