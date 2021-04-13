@@ -107,6 +107,10 @@ contract ERC1155RG is ERC1155Pausable, Owned {
             return _currentTokenID.add(1);
         }
 
+    function totalIDs() external view returns (uint256) {
+            return _currentTokenID;
+        }
+
     /**
     * @dev increments the value of _currentTokenID
     */

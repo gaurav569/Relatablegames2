@@ -28,6 +28,8 @@ contract ERC1155Game is  OwnableUpgradeable, ReentrancyGuardUpgradeable{
     //tokenid-> tokenname-> Variable fix price of ingredient
     mapping(uint256=> mapping(uint8 => uint256)) private fixVarPriceMap;
 
+
+
     // struct Bids{
     // uint  bidIncrement;
     // uint  startTime;
@@ -49,6 +51,7 @@ contract ERC1155Game is  OwnableUpgradeable, ReentrancyGuardUpgradeable{
     address private beneficiary;
 
     uint timePeriodBid;
+
 
     event LogSale(uint256 tokenId, uint256[] fixPrices);
     event LogBuy(uint256 tokenId, uint8 _tokenName, address buyer);
@@ -84,6 +87,9 @@ contract ERC1155Game is  OwnableUpgradeable, ReentrancyGuardUpgradeable{
 
     // tokenID => TokenType
     mapping (uint256 => TokenType) private tokenType;
+    
+    // to map current multiply factor like 1.1 * 1.1 ....
+    mapping(uint256 => uint256) private currMultiplyFactorVarPrice;
 
     function getTokenType(uint256 tokenId) public view
             returns (uint8){
@@ -149,6 +155,9 @@ contract ERC1155Game is  OwnableUpgradeable, ReentrancyGuardUpgradeable{
         for(uint8 i=0;i<fixPrice.length;i++)
             fixVarPriceMap[id][i]=fixPrice[i];
 
+        // initialise by 1
+        currMultiplyFactorVarPrice[id]=10000;
+
         emit LogSale(id, fixPrice);
         return true;
 
@@ -184,16 +193,22 @@ contract ERC1155Game is  OwnableUpgradeable, ReentrancyGuardUpgradeable{
         // y = x^2+1 => Factor = (x^2+1)/100 +1 => (x^2+101)/100
         // uint multiplyFactor =SafeMath.div(SafeMath.add(SafeMath.mul(totalSupply,2),101),100);
         // multiply factor is 1.1
-        uint multiplyFactor =SafeMath.div(110,100);
-        uint currPrice = SafeMath.mul(fixVarPriceMap[id][_tokenName], multiplyFactor);
+        uint256 multiplyFactor;
+        if(totalSupply>0)
+            multiplyFactor = currMultiplyFactorVarPrice[id].mul(110);
+        else
+            multiplyFactor = currMultiplyFactorVarPrice[id].mul(100);
+
+        uint currPrice = fixVarPriceMap[id][_tokenName].mul(multiplyFactor).div(1000000);
 
         IERC20 ERC20Token = tokenNames[_tokenName];
         ERC20Token.transferFrom(_msgSender(), beneficiary, currPrice);
 
         ERC1155Token.mint(_msgSender(), id, 1, "0x");
+
+        // update multiplying factor
+        currMultiplyFactorVarPrice[id]=multiplyFactor.div(100);
         
-        // update the current price
-        fixVarPriceMap[id][_tokenName] = currPrice;
         emit LogBuy(id,_tokenName,_msgSender());
 
         return true;

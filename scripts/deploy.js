@@ -15,20 +15,17 @@ async function main(){
     console.log(`governance token address: ${erc20.address}`);
 
 
-
     ERC1155Token=await ethers.getContractFactory('ERC1155RG');
     erc1155 = await ERC1155Token.deploy(initialURI,deployer.address);
     console.log(`erc1155 token address: ${erc1155.address}`);
 
 
-
     Game=await ethers.getContractFactory('ERC1155Game');
-    game = await Game.deploy();
-    console.log(`game contract address: ${game.address}`);
     beneficiary=deployer.address;
-
-    //_tokenAddress, address _beneficiary, address USDCToken
-    await game.initialize(erc1155.address, beneficiary, "0xdA5289fCAAF71d52a80A254da614a192b693e977");
+    // USDC address 0xdA5289fCAAF71d52a80A254da614a192b693e977
+    game = await upgrades.deployProxy(Game, [ erc1155.address, beneficiary, "0xdA5289fCAAF71d52a80A254da614a192b693e977"], { initializer: 'initialize' });
+    // game = await upgrades.upgradeProxy("0x12FcF0491e8EfF015601aa949F3663B0970e803D", Game);
+    console.log(`game proxy contract address: ${game.address}`);
     
 
 
@@ -38,14 +35,18 @@ async function main(){
     // address _rewardsToken,
     // address _stakingToken,
     // address gameContract
-    staking = await Staking.deploy(deployer.address,deployer.address,erc20.address, erc1155.address, game.address);
+    // staking = await Staking.deploy(deployer.address,deployer.address,erc20.address, erc1155.address, game.address);
+    staking = await upgrades.deployProxy(Staking, [ deployer.address,deployer.address,erc20.address, erc1155.address, game.address], { initializer: 'initialize' });
+    // // // staking = await upgrades.upgradeProxy("PROXY_ADDRESS", Staking);
+
     console.log(`staking contract address: ${staking.address}`);
     
     // set contract on erc1155 token as game contract
     await erc1155.setContract(game.address);
+    await game.addERC20Coin(erc20.address, 1);
 
     // changing to 1 week 
-    await staking.setRewardsDuration(604800);
+    // await staking.setRewardsDuration(604800);
 
     
 }
